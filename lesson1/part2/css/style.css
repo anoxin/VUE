@@ -1,0 +1,8 @@
+.rotate {
+  transform: rotate(180deg);
+}
+
+li {
+  list-style-type: none;
+  cursor: pointer;
+}

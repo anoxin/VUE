@@ -1,0 +1,385 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+body {
+  color: #292F36;
+  background-color: #fff;
+  font-family: "DM Serif Display", serif;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__menu {
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+}
+.header__link {
+  padding: 65px 0;
+  font-family: "Jost", sans-serif;
+  font-size: 20px;
+  color: #292F36;
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.logo__text {
+  font-size: 40px;
+}
+
+.home-info__wrapper {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  background: url(../img/home-info/Images.jpg), center center/cover no-repeat;
+  height: 758px;
+  border-radius: 70px;
+}
+.home-info__block-info {
+  max-width: 443px;
+}
+.home-info__title {
+  font-size: 65px;
+  margin-bottom: 18px;
+}
+.home-info__text {
+  font-family: "Jost", sans-serif;
+  font-size: 22px;
+  margin-bottom: 11px;
+}
+
+.button__black {
+  display: flex;
+  padding: 26px 49px 26px 48px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 18px;
+  background: #292F36;
+  box-shadow: 0px 10px 20px 0px rgba(192, 192, 192, 0.35);
+  color: #FFF;
+  font-family: "Jost", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.projects {
+  padding: 96px 0 101px;
+  justify-content: space-between;
+}
+.projects__title {
+  margin-bottom: 8px;
+  font-size: 50px;
+  text-align: center;
+}
+.projects__text {
+  margin: 0 auto 93px;
+  max-width: 737px;
+  color: #4D5053;
+  text-align: center;
+  font-family: "Jost", sans-serif;
+  font-size: 22px;
+}
+.projects__carts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.cart {
+  width: 548px;
+  height: 619px;
+  margin-bottom: 20px;
+}
+.cart__block-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+.cart__img {
+  width: inherit;
+}
+.cart__img-block {
+  width: 100%;
+  height: 525px;
+  overflow: hidden;
+}
+.cart__title {
+  margin-bottom: 4px;
+  font-size: 25px;
+}
+.cart__text-info {
+  color: #4D5053;
+  font-family: "Jost", sans-serif;
+  font-size: 22px;
+}
+.cart__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #F4F0EC;
+}
+
+.advantages {
+  padding: 151px 0;
+  background-color: #F4F0EC;
+}
+.advantages__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.advantages__item:not(:last-child) {
+  border-right: 1px solid #CDA274;
+}
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+}
+.advantages__number {
+  margin-bottom: 16px;
+  text-align: center;
+  color: #CDA274;
+  font-size: 85px;
+}
+.advantages__text {
+  text-align: center;
+  color: #4D5053;
+  font-family: "Jost", sans-serif;
+  font-size: 22px;
+}
+
+.articles {
+  padding: 96px 0;
+}
+.articles__title {
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+.articles__text {
+  font-family: "Jost", sans-serif;
+  font-size: 22px;
+  text-align: center;
+  max-width: 811px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+.articles__carts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-design {
+  width: 340px;
+  padding: 21px;
+  border-radius: 62px;
+  border: 1px solid #E7E7E7;
+  box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
+}
+.cart-design__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.cart-design__top {
+  position: relative;
+  margin-bottom: 21px;
+}
+.cart-design__top-img {
+  width: 100%;
+}
+.cart-design__top-info {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+  display: block;
+  border-radius: 8px 8px 8px 0px;
+  padding: 11px;
+  background: #FFF;
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 16px;
+}
+.cart-design__title {
+  font-size: 25px;
+  margin-bottom: 39px;
+}
+.cart-design__bottom {
+  display: flex;
+  margin-bottom: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart-design__date {
+  color: #4D5053;
+  font-family: Jost;
+  font-size: 16px;
+}
+.cart-design__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #F4F0EC;
+}
+
+.footer {
+  margin-bottom: 134px;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__about {
+  max-width: 393px;
+}
+.footer__about-info {
+  margin-top: 18px;
+  margin-bottom: 31px;
+  color: #4D5053;
+  font-family: "Jost", sans-serif;
+  font-size: 22px;
+}
+.footer__about-social-network {
+  display: flex;
+  justify-content: space-between;
+  width: 90px;
+}
+.footer__pages {
+  display: flex;
+  flex-direction: column;
+  margin-right: 100px;
+}
+.footer__subtitle {
+  color: #292F36;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.footer__link {
+  color: #4D5053;
+  font-family: "Jost", sans-serif;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  max-width: 258px;
+}
+.footer__contact-text {
+  color: #4D5053;
+  font-family: "Jost", sans-serif;
+  font-size: 22px;
+  margin-bottom: 30px;
+}/*# sourceMappingURL=style.css.map */
