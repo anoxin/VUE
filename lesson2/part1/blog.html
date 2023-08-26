@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="logo">
+                    <img src="./img/logo/Logo.svg" alt="logo">
+                    <span class="logo__text">Interno</span>
+                </div>
+                <nav class="header__menu">
+                    <a href="#" class="header__link">Home</a>
+                    <a href="#" class="header__link">Project</a>
+                    <a href="#" class="header__link">Blog</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="blog">
+        <div class="container blog__content">
+            <div class="blog__wrapper">
+                <h1 class="blog__title">Articles & News</h1>
+                <nav class="breadcrumb">
+                    <ul class="breadcrumb__items">
+                        <li class="breadcrumb__list">
+                            <a class="breadcrumb__link" href="#">Home</a></li>
+                        <li class="breadcrumb__list">
+                            <a class="breadcrumb__link" href="#">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="latest-post">
+        <div class="container">
+            <h2 class="latest-post__title">Latest Post</h2>
+            <div class="latest-post__cart">
+                <img src="./img/blog/cart.jpg" alt="design" class="latest-post__cart-img">
+                <div class="latest-post__cart-info">
+                    <h3 class="latest-post__cart-title">Low Cost Latest Invented Interior Designing Ideas</h3>
+                    <p class="latest-post__cart-text">
+                        Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere
+                        in.Contrary to popular belief
+                    </p>
+                    <p class="latest-post__cart-text">
+                        Lorem Ipsum is not simply random text. It has roots in a piece of classica.
+                    </p>
+                    <div class="cart-design-bottom latest-post__top">
+                        <span class="cart-design__date">26 December,2022 </span>
+                        <a href="#" class="cart-design__link"><img src="./img/cart-design/link.svg" alt="link"></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="article-news">
+        <div class="container">
+            <h2 class="article-news__title">Latest Post</h2>
+            <div id="article-news-card" class="article-news__wrapper">
+                <div class="cart-design" v-for="cart in carts" @key="cart.id">
+                    <div class="cart-design__wrapper">
+                        <div class="cart-design__top">
+                            <img :src="cart.img" alt="image design" class="cart-design__top-img">
+                            <span class="cart-design__top-info">{{cart.name}}</span>
+                        </div>
+                        <h2 class="cart-design__title">Best For Any Office & Business Interior
+                            Solution</h2>
+                        <div class="cart-design-bottom cart-design__bottom">
+                            <span class="cart-design__date">{{cart.data}}</span>
+                            <a href="#" class="cart-design__link"><img src="./img/cart-design/link.svg" alt="link"></a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="pagination">
+                <a href="#" class="pagination__item">01</a>
+                <a href="#" class="pagination__item">02</a>
+                <a href="#" class="pagination__item">03</a>
+                <a href="#" class="pagination__item">
+                    <img src="./img/cart-design/link.svg" alt="link">
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__about">
+                    <div class="logo">
+                        <img src="./img/logo/Logo.svg" alt="logo">
+                        <span class="logo__text">Interno</span>
+                    </div>
+                    <p class="footer__about-info">
+                        It is a long established fact that a reader will be distracted lookings.
+                    </p>
+                    <div class="footer__about-social-network">
+                        <a href="#" class="footer__link-network"><img src="./img/footer/twitter.svg" alt="twitter"></a>
+                        <a href="#" class="footer__link-network"><img src="./img/footer/instagram.svg"
+                                alt="instagram"></a>
+                    </div>
+
+                </div>
+                <div class="footer__pages">
+                    <h3 class="footer__subtitle">Pages</h3>
+                    <a href="#" class="footer__link">Home</a>
+                    <a href="#" class="footer__link">Project</a>
+                    <a href="#" class="footer__link">Blog</a>
+                </div>
+                <div class="footer__contact">
+                    <h3 class="footer__subtitle">Contact</h3>
+                    <p class="footer__contact-text">55 East Birchwood Ave.
+                        Brooklyn, New York 11201</p>
+                    <p class="footer__contact-text">contact@interno.com</p>
+                    <p class="footer__contact-text">(123) 456 - 7890</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8"></script>
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
