@@ -1,5 +1,6 @@
 Vue.component('blog-details', {
-    props: ['subtitle', 'imgDesign'],
+    props: ['subtitle', 'design'],
+    
     template: `
         <div class="blog-details">
             <div class="blog-details__info">
@@ -24,7 +25,7 @@ Vue.component('blog-details', {
                 <li class="blog-details__item">Contrary to popular belief.There are many variations of
                     passages of Lorem Ipsum available, but the majority have suffered.</li>
             </ul>
-            <div style="background: url(./img/blog-details/{{imgDesign}}.png) center/ cover no-repeat" class="blog-details__img"></div>
+            <div v-bind:style="{'background': design.background}" class="blog-details__img"></div>
             <p class="blog-details__text">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
                 turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of
                 Lorem Ipsum available, but the majority have suffered.</p>
@@ -38,16 +39,11 @@ Vue.component('blog-details', {
 
     data() {
         return {
-            title: null,
-            data: null,
-            style: null,
-            text: null,
+        
         };
     },
     computed: {
-        filteredItems() {
-            return this.items.filter(item => item.includes(this.filterItem));
-        }
+      
     },
 
 });

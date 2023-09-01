@@ -93,10 +93,10 @@
                 <div class="blog-list">
                     <div @click="showDetails(index)" style="margin-bottom: 60px;" v-for="(blog, index) in blogArrs"
                         :key="index" v-show="blog.filterList">
-                        <blog-list :title="blog.title" :img="blog.img" :text="blog.info" subtitle="blog.subtitle"
-                            imgDesign="blog.imgDesign" v-show="blog.listShow">
+                        <blog-list :title="blog.title" :img="blog.img" :text="blog.info" v-show="blog.listShow">
                         </blog-list>
-                        <blog-details v-show="blog.show"></blog-details>
+                        <blog-details :subtitle="blog.subtitle"
+                        :design="blog.img" v-show="blog.show"></blog-details>
                     </div>
                 </div>
 
@@ -165,14 +165,14 @@
             data: {
                 blogArrs: [{
                         title: "#1 Let’s Get Solution for Building Construction Work",
-                        img: "background: url(./img/blog-details/blog-1.png) center/ cover no-repeat",
+                        img: {background: "url(./img/blog-details/blog-1.png) center/ cover no-repeat"},
                         info: `Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary
                     to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority
                     have suffered alteration in some form, by injecthumour, or randomised words which don't look even
                     slightly believable. Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on
                     the Internet tend to repeat predefined chunks as necessary.`,
                         subtitle: "#1 Design sprints are great",
-                        imgDesign: "background: url(./img/blog-details/block-2.png) center/ cover no-repeat",
+                        design: {background: "url(./img/blog-details/blog-2.png) center/ cover no-repeat"},
                         show: false,
                         listShow: true,
                         filter: ["Kitchen", "Bedroom"],
@@ -180,29 +180,29 @@
                     },
                     {
                         title: "#2 Let’s Get Solution for Building Construction Work",
-                        img: "background: url(./img/blog-details/blog-2.png) center/ cover no-repeat",
+                        img: {background: "url(./img/blog-details/blog-2.png) center/ cover no-repeat"},
                         info: `Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary
                     to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority
                     have suffered alteration in some form, by injecthumour, or randomised words which don't look even
                     slightly believable. Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on
                     the Internet tend to repeat predefined chunks as necessary.`,
                         subtitle: "#2 Design sprints are great",
-                        imgDesign: "background: url(./img/blog-details/block-3.png) center/ cover no-repeat",
+                        design: {background: "url(./img/blog-details/blog-3.png) center/ cover no-repeat"},
                         show: false,
                         listShow: true,
-                        filter: ["Building", "Architecture", ],
+                        filter: ["Building", "Architecture", "Bedroom"],
                         filterList: true
                     },
                     {
                         title: "#3 Let’s Get Solution for Building Construction Work",
-                        img: "background: url(./img/blog-details/blog-3.png) center/ cover no-repeat",
+                        img: {background: "url(./img/blog-details/blog-3.png) center/ cover no-repeat"},
                         info: `Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary
                     to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority
                     have suffered alteration in some form, by injecthumour, or randomised words which don't look even
                     slightly believable. Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on
                     the Internet tend to repeat predefined chunks as necessary.`,
                         subtitle: "#3 Design sprints are great",
-                        imgDesign: "block-1",
+                        design: {background: "url(./img/blog-details/blog-1.png) center/ cover no-repeat"},
                         show: false,
                         listShow: true,
                         filter: ["Kitchen Planning", "Bedroom", "Kitchen"],
@@ -224,7 +224,9 @@
                 filterList(info) {
                     this.blogArrs.forEach((element, index) => {
                         if (!element.filter.includes(info)) {
-                            this.blogArrs.filterList = false;
+                            this.blogArrs[index].filterList = false;
+                        } else {
+                            this.blogArrs[index].filterList = true;
                         }
 
                     });
